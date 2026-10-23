@@ -22,6 +22,32 @@ PLUGINS = {
         # Magnets carry everything; no .torrent is fetched from anywhere else.
         'network': ['aniliberty.top'],
     },
+    'nyaa': {
+        'name': 'Nyaa',
+        'version': '1.0.0',
+        'author': 'Mediary community',
+        'description': 'Anime releases from Nyaa (nyaa.si), read from its search page.',
+        'lang': 'multi',
+        'homepage': 'https://nyaa.si',
+        'icon': 'https://nyaa.si/static/favicon.png',
+        'network': ['nyaa.si'],
+        'config': [
+            {
+                'name': 'category',
+                'label': 'Category',
+                'type': 'select',
+                'options': ['English-translated', 'Non-English-translated', 'Raw', 'All anime'],
+                'default': 'English-translated',
+            },
+            {
+                'name': 'filter',
+                'label': 'Uploaders',
+                'type': 'select',
+                'options': ['No filter', 'No remakes', 'Trusted only'],
+                'default': 'No filter',
+            },
+        ],
+    },
 }
 
 

@@ -7,6 +7,7 @@ and downloads them as it does any other source's.
 | Plugin | Site | Language | Reaches |
 |---|---|---|---|
 | [`aniliberty`](aniliberty/plugin.js) | AniLiberty (formerly AniLibria) | ru | `aniliberty.top` |
+| [`nyaa`](nyaa/plugin.js) | Nyaa | multi | `nyaa.si` |
 
 These plugins are not part of Mediary and Mediary does not host, provide or
 recommend any media. A plugin only searches a site's public listing; what you
