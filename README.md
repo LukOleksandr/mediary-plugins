@@ -17,7 +17,7 @@ download through it, and whether you may, is between you and that site.
 In Mediary: **Settings → Extensions → Catalog → Repositories**, add
 
 ```
-https://raw.githubusercontent.com/<owner>/<repo>/main/repository.json
+https://raw.githubusercontent.com/LukOleksandr/mediary-plugins/main/repository.json
 ```
 
 and install from the catalog. Mediary shows the sites a plugin will visit

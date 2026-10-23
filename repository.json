@@ -2,7 +2,7 @@
 	"name": "Mediary plugins",
 	"plugins": [
 		{
-			"manifest": "https://raw.githubusercontent.com/OWNER/REPO/main/aniliberty/manifest.json",
+			"manifest": "https://raw.githubusercontent.com/LukOleksandr/mediary-plugins/main/aniliberty/manifest.json",
 			"id": "aniliberty",
 			"name": "AniLiberty",
 			"version": "1.0.0",
