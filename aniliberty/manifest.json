@@ -1,7 +1,7 @@
 {
 	"id": "aniliberty",
 	"name": "AniLiberty",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"type": "torrent-provider",
 	"author": "Mediary community",
 	"description": "Russian dubs of anime from AniLiberty (aniliberty.top), formerly AniLibria: whole-season torrents through the site's public API.",
@@ -12,5 +12,5 @@
 		"aniliberty.top"
 	],
 	"payload": "https://raw.githubusercontent.com/LukOleksandr/mediary-plugins/main/aniliberty/plugin.js",
-	"sha256": "7a0146becec656249221b8956ead599f18883f8e07a3546ef9d499ed7bcea02d"
+	"sha256": "73a563bfa5fad41f8d30f869db47f51987a8370febef5ef735fad7bc957b61d9"
 }

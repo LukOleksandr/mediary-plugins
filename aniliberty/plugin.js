@@ -72,7 +72,10 @@ class Provider {
 			return []
 		}
 
-		const wanted = new Set([query, ...request.titles].map(words).filter(Boolean))
+		// The title's names, not the query: "Sousou no Frieren S2" searches as
+		// "Sousou no Frieren" here, and the first season must not pass for it.
+		const names = request.titles.length > 0 ? request.titles : [query]
+		const wanted = new Set(names.map(words).filter(Boolean))
 
 		const found = await get(`${API}/app/search/releases?query=${encodeURIComponent(query)}`)
 		if (!Array.isArray(found)) {

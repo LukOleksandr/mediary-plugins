@@ -13,7 +13,7 @@ import sys
 PLUGINS = {
     'aniliberty': {
         'name': 'AniLiberty',
-        'version': '1.0.0',
+        'version': '1.0.1',
         'author': 'Mediary community',
         'description': 'Russian dubs of anime from AniLiberty (aniliberty.top), formerly AniLibria: whole-season torrents through the site\'s public API.',
         'lang': 'ru',
