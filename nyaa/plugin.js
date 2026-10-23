@@ -1,9 +1,11 @@
 // Searches Nyaa (nyaa.si), the largest public tracker of anime releases, by
 // reading its search page: Nyaa has no JSON API, and its RSS lacks the peers.
 //
-// A page holds 75 rows. For a long show, the newest 75 may not reach the
-// episode asked, so with an episode the search asks twice: for the episode by
-// number, and for the title's best-seeded releases, where the batches are.
+// A page holds 75 rows, and the newest 75 may not reach what is wanted: for a
+// long show, the episode asked; for a first season, anything past its sequel's
+// weekly releases. So the search asks twice: for the episode by number, or for
+// the newest without one, and for the title's best-seeded releases, where the
+// batches are.
 
 const SITE = 'https://nyaa.si'
 
@@ -91,9 +93,8 @@ class Provider {
 			return []
 		}
 
-		const asks = request.episode
-			? [page(`${query} ${String(request.episode).padStart(2, '0')}`, ''), page(query, 'seeders')]
-			: [page(query, '')]
+		const first = request.episode ? `${query} ${String(request.episode).padStart(2, '0')}` : query
+		const asks = [page(first, ''), page(query, 'seeders')]
 
 		/** @type {Map<string, Release>} */
 		const found = new Map()

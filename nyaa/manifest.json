@@ -1,7 +1,7 @@
 {
 	"id": "nyaa",
 	"name": "Nyaa",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"type": "torrent-provider",
 	"author": "Mediary community",
 	"description": "Anime releases from Nyaa (nyaa.si), read from its search page.",
@@ -37,5 +37,5 @@
 		"nyaa.si"
 	],
 	"payload": "https://raw.githubusercontent.com/LukOleksandr/mediary-plugins/main/nyaa/plugin.js",
-	"sha256": "c783c038b31aa9c695ddfda2cbd63620fec37760079b6b119ddc30e2bd140106"
+	"sha256": "e083aac44c1f6a3da432778a7775f912981027bf05ff0a8fd2682fb49951a4eb"
 }

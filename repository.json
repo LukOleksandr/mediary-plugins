@@ -16,7 +16,7 @@
 			"manifest": "https://raw.githubusercontent.com/LukOleksandr/mediary-plugins/main/nyaa/manifest.json",
 			"id": "nyaa",
 			"name": "Nyaa",
-			"version": "1.0.0",
+			"version": "1.0.1",
 			"type": "torrent-provider",
 			"author": "Mediary community",
 			"description": "Anime releases from Nyaa (nyaa.si), read from its search page.",

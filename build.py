@@ -24,7 +24,7 @@ PLUGINS = {
     },
     'nyaa': {
         'name': 'Nyaa',
-        'version': '1.0.0',
+        'version': '1.0.1',
         'author': 'Mediary community',
         'description': 'Anime releases from Nyaa (nyaa.si), read from its search page.',
         'lang': 'multi',
