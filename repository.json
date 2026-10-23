@@ -1,0 +1,16 @@
+{
+	"name": "Mediary plugins",
+	"plugins": [
+		{
+			"manifest": "https://raw.githubusercontent.com/OWNER/REPO/main/aniliberty/manifest.json",
+			"id": "aniliberty",
+			"name": "AniLiberty",
+			"version": "1.0.0",
+			"type": "torrent-provider",
+			"author": "Mediary community",
+			"description": "Russian dubs of anime from AniLiberty (aniliberty.top), formerly AniLibria: whole-season torrents through the site's public API.",
+			"lang": "ru",
+			"icon": "https://cdn.anilibria.top/static/apple-touch-icon.png"
+		}
+	]
+}
