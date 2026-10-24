@@ -76,6 +76,18 @@ PLUGINS = {
         # The site, and the image hosts its scans are on.
         'network': ['mangahub.ru', '*.statichub.org'],
     },
+    'zazaza': {
+        'type': 'manga-provider',
+        'name': 'ZazaZa',
+        'version': '1.0.0',
+        'author': 'Mediary community',
+        'description': "Manga in Russian from ZazaZa (a.zazaza.me), of ReadManga's Grouple network, read from its pages. The site signs its images' addresses and its image server refuses them outside a browser; the plugin drops the signature, which works around the site's protection and may stop working.",
+        'lang': 'ru',
+        'homepage': 'https://a.zazaza.me',
+        'icon': 'https://resrm.one-way.work/static/apple-touch-icon-8e453b7539d40db129bdd248bc56aaca.png',
+        # The site, and the network's image servers.
+        'network': ['a.zazaza.me', '*.one-way.work'],
+    },
     'nyaa': {
         'name': 'Nyaa',
         'version': '1.0.1',

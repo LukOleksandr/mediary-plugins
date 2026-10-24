@@ -13,6 +13,7 @@ reader and saves chapters as CBZ.
 | [`mangalib`](mangalib/plugin.js) | MangaLib (manga) | ru | `api2.mangalib.me`, `mangalib.me`, `*.imglib.info`, `*.cdnlibs.org` |
 | [`slashlib`](slashlib/plugin.js) | SlashLib (manga; some titles 18+) | ru | `api2.mangalib.me`, `slashlib.me`, `*.hentaicdn.org` |
 | [`mangahub`](mangahub/plugin.js) | MangaHub (manga) | ru | `mangahub.ru`, `*.statichub.org` |
+| [`zazaza`](zazaza/plugin.js) | ZazaZa (manga; images without the site's signature) | ru | `a.zazaza.me`, `*.one-way.work` |
 
 These plugins are not part of Mediary and Mediary does not host, provide or
 recommend any media. A plugin only reads a site's public listing; what you
