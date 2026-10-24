@@ -1,0 +1,30 @@
+{
+	"id": "slashlib",
+	"name": "SlashLib",
+	"version": "1.0.0",
+	"type": "manga-provider",
+	"author": "Mediary community",
+	"description": "Manga in Russian from SlashLib (slashlib.me), MangaLib's sister site for BL titles, through the API both use. Some titles are 18+.",
+	"lang": "ru",
+	"homepage": "https://slashlib.me",
+	"icon": "https://mangalib.me/static/images/logo/sl/icon-180.png",
+	"config": [
+		{
+			"name": "server",
+			"label": "Image server",
+			"type": "select",
+			"options": [
+				"main",
+				"compress"
+			],
+			"default": "main"
+		}
+	],
+	"network": [
+		"api2.mangalib.me",
+		"slashlib.me",
+		"*.hentaicdn.org"
+	],
+	"payload": "https://raw.githubusercontent.com/LukOleksandr/mediary-plugins/main/slashlib/plugin.js",
+	"sha256": "7599c77ef8b0dbfd9475ca58585b2e40fb909e0cd77a1024fd35d64a3960a583"
+}

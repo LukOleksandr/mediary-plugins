@@ -24,6 +24,17 @@
 			"icon": "https://mangalib.me/static/images/logo/ml/icon-180.png"
 		},
 		{
+			"manifest": "https://raw.githubusercontent.com/LukOleksandr/mediary-plugins/main/slashlib/manifest.json",
+			"id": "slashlib",
+			"name": "SlashLib",
+			"version": "1.0.0",
+			"type": "manga-provider",
+			"author": "Mediary community",
+			"description": "Manga in Russian from SlashLib (slashlib.me), MangaLib's sister site for BL titles, through the API both use. Some titles are 18+.",
+			"lang": "ru",
+			"icon": "https://mangalib.me/static/images/logo/sl/icon-180.png"
+		},
+		{
 			"manifest": "https://raw.githubusercontent.com/LukOleksandr/mediary-plugins/main/nyaa/manifest.json",
 			"id": "nyaa",
 			"name": "Nyaa",

@@ -11,6 +11,7 @@ reader and saves chapters as CBZ.
 | [`aniliberty`](aniliberty/plugin.js) | AniLiberty (formerly AniLibria) | ru | `aniliberty.top` |
 | [`nyaa`](nyaa/plugin.js) | Nyaa | multi | `nyaa.si` |
 | [`mangalib`](mangalib/plugin.js) | MangaLib (manga) | ru | `api2.mangalib.me`, `mangalib.me`, `*.imglib.info`, `*.cdnlibs.org` |
+| [`slashlib`](slashlib/plugin.js) | SlashLib (manga; some titles 18+) | ru | `api2.mangalib.me`, `slashlib.me`, `*.hentaicdn.org` |
 
 These plugins are not part of Mediary and Mediary does not host, provide or
 recommend any media. A plugin only reads a site's public listing; what you
@@ -29,7 +30,9 @@ before it installs anything.
 
 ## Changing a plugin
 
-1. Edit `<id>/plugin.js` and raise its `version` in `build.py`.
+1. Edit `<id>/plugin.js` and raise its `version` in `build.py`. `slashlib` is
+   written from `mangalib/plugin.js` by the build; change that one, and raise
+   both versions.
 2. `python build.py https://raw.githubusercontent.com/<owner>/<repo>/main` —
    rewrites each `manifest.json` with the code's SHA-256, and `repository.json`.
 3. Commit both. Mediary refuses code whose sum does not match its manifest.

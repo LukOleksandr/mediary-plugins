@@ -43,6 +43,27 @@ PLUGINS = {
             },
         ],
     },
+    'slashlib': {
+        'type': 'manga-provider',
+        'name': 'SlashLib',
+        'version': '1.0.0',
+        'author': 'Mediary community',
+        'description': "Manga in Russian from SlashLib (slashlib.me), MangaLib's sister site for BL titles, through the API both use. Some titles are 18+.",
+        'lang': 'ru',
+        'homepage': 'https://slashlib.me',
+        'icon': 'https://mangalib.me/static/images/logo/sl/icon-180.png',
+        # The API it shares with MangaLib, the site as the images' referrer, its image servers.
+        'network': ['api2.mangalib.me', 'slashlib.me', '*.hentaicdn.org'],
+        'config': [
+            {
+                'name': 'server',
+                'label': 'Image server',
+                'type': 'select',
+                'options': ['main', 'compress'],
+                'default': 'main',
+            },
+        ],
+    },
     'nyaa': {
         'name': 'Nyaa',
         'version': '1.0.1',
@@ -72,10 +93,37 @@ PLUGINS = {
 }
 
 
+# Sites on MangaLib's platform differ only in these: each plugin.js is written
+# from mangalib/plugin.js, so a fix there reaches them all on the next build.
+VARIANTS = {
+    'slashlib': [
+        ("const SITE = 'https://mangalib.me/'", "const SITE = 'https://slashlib.me/'"),
+        ("const SITE_ID = '1'", "const SITE_ID = '2'"),
+        ('(mangalib.me)', '(slashlib.me)'),
+        ('MangaLib', 'SlashLib'),
+    ],
+}
+
+
+def write_variants(root: pathlib.Path) -> None:
+    source = (root / 'mangalib' / 'plugin.js').read_text(encoding='utf-8')
+    for plugin_id, swaps in VARIANTS.items():
+        code = source
+        for old, new in swaps:
+            if old not in code:
+                raise SystemExit(f'{plugin_id}: {old!r} is no longer in mangalib/plugin.js')
+            code = code.replace(old, new)
+        code = '// Written by build.py from mangalib/plugin.js; change that one.\n' + code
+        (root / plugin_id).mkdir(exist_ok=True)
+        (root / plugin_id / 'plugin.js').write_text(code, encoding='utf-8', newline='\n')
+
+
 def main(base: str) -> None:
     base = base.rstrip('/')
     root = pathlib.Path(__file__).parent
     entries = []
+
+    write_variants(root)
 
     for plugin_id, meta in PLUGINS.items():
         code = (root / plugin_id / 'plugin.js').read_bytes()
