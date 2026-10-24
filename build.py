@@ -22,6 +22,27 @@ PLUGINS = {
         # Magnets carry everything; no .torrent is fetched from anywhere else.
         'network': ['aniliberty.top'],
     },
+    'mangalib': {
+        'type': 'manga-provider',
+        'name': 'MangaLib',
+        'version': '1.0.0',
+        'author': 'Mediary community',
+        'description': 'Manga in Russian from MangaLib (mangalib.me), through the API its own site uses; every translation team of a chapter is a copy of its own.',
+        'lang': 'ru',
+        'homepage': 'https://mangalib.me',
+        'icon': 'https://mangalib.me/static/images/logo/ml/icon-180.png',
+        # The API, the site as the images' referrer, and the image servers it names.
+        'network': ['api2.mangalib.me', 'mangalib.me', '*.imglib.info', '*.cdnlibs.org'],
+        'config': [
+            {
+                'name': 'server',
+                'label': 'Image server',
+                'type': 'select',
+                'options': ['main', 'compress'],
+                'default': 'main',
+            },
+        ],
+    },
     'nyaa': {
         'name': 'Nyaa',
         'version': '1.0.1',
@@ -63,7 +84,7 @@ def main(base: str) -> None:
             'id': plugin_id,
             'name': meta['name'],
             'version': meta['version'],
-            'type': 'torrent-provider',
+            'type': meta.get('type', 'torrent-provider'),
             'author': meta['author'],
             'description': meta['description'],
             'lang': meta['lang'],
@@ -79,7 +100,7 @@ def main(base: str) -> None:
             'id': plugin_id,
             'name': meta['name'],
             'version': meta['version'],
-            'type': 'torrent-provider',
+            'type': meta.get('type', 'torrent-provider'),
             'author': meta['author'],
             'description': meta['description'],
             'lang': meta['lang'],

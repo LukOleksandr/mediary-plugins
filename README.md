@@ -1,17 +1,20 @@
 # Mediary plugins
 
-Search plugins for [Mediary](https://github.com/MediaryDesktop): each finds
-releases on one site and hands them to the node, which parses, ranks, streams
-and downloads them as it does any other source's.
+Plugins for [Mediary](https://github.com/MediaryDesktop). A torrent plugin
+finds releases on one site and hands them to the node, which parses, ranks,
+streams and downloads them as it does any other source's; a manga plugin lists
+a site's series, chapters and pages, and the node fetches the pages for its
+reader and saves chapters as CBZ.
 
 | Plugin | Site | Language | Reaches |
 |---|---|---|---|
 | [`aniliberty`](aniliberty/plugin.js) | AniLiberty (formerly AniLibria) | ru | `aniliberty.top` |
 | [`nyaa`](nyaa/plugin.js) | Nyaa | multi | `nyaa.si` |
+| [`mangalib`](mangalib/plugin.js) | MangaLib (manga) | ru | `api2.mangalib.me`, `mangalib.me`, `*.imglib.info`, `*.cdnlibs.org` |
 
 These plugins are not part of Mediary and Mediary does not host, provide or
-recommend any media. A plugin only searches a site's public listing; what you
-download through it, and whether you may, is between you and that site.
+recommend any media. A plugin only reads a site's public listing; what you
+download or read through it, and whether you may, is between you and that site.
 
 ## Install
 

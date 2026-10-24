@@ -1,0 +1,31 @@
+{
+	"id": "mangalib",
+	"name": "MangaLib",
+	"version": "1.0.0",
+	"type": "manga-provider",
+	"author": "Mediary community",
+	"description": "Manga in Russian from MangaLib (mangalib.me), through the API its own site uses; every translation team of a chapter is a copy of its own.",
+	"lang": "ru",
+	"homepage": "https://mangalib.me",
+	"icon": "https://mangalib.me/static/images/logo/ml/icon-180.png",
+	"config": [
+		{
+			"name": "server",
+			"label": "Image server",
+			"type": "select",
+			"options": [
+				"main",
+				"compress"
+			],
+			"default": "main"
+		}
+	],
+	"network": [
+		"api2.mangalib.me",
+		"mangalib.me",
+		"*.imglib.info",
+		"*.cdnlibs.org"
+	],
+	"payload": "https://raw.githubusercontent.com/LukOleksandr/mediary-plugins/main/mangalib/plugin.js",
+	"sha256": "0139b5635d42417c5e81aad6f68ecd45c6c31f85518d45d4fe81b97463c3ad54"
+}

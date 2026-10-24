@@ -13,6 +13,17 @@
 			"icon": "https://cdn.anilibria.top/static/apple-touch-icon.png"
 		},
 		{
+			"manifest": "https://raw.githubusercontent.com/LukOleksandr/mediary-plugins/main/mangalib/manifest.json",
+			"id": "mangalib",
+			"name": "MangaLib",
+			"version": "1.0.0",
+			"type": "manga-provider",
+			"author": "Mediary community",
+			"description": "Manga in Russian from MangaLib (mangalib.me), through the API its own site uses; every translation team of a chapter is a copy of its own.",
+			"lang": "ru",
+			"icon": "https://mangalib.me/static/images/logo/ml/icon-180.png"
+		},
+		{
 			"manifest": "https://raw.githubusercontent.com/LukOleksandr/mediary-plugins/main/nyaa/manifest.json",
 			"id": "nyaa",
 			"name": "Nyaa",
