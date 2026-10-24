@@ -64,6 +64,18 @@ PLUGINS = {
             },
         ],
     },
+    'mangahub': {
+        'type': 'manga-provider',
+        'name': 'MangaHub',
+        'version': '1.0.0',
+        'author': 'Mediary community',
+        'description': 'Manga in Russian from MangaHub (mangahub.ru), read from its pages.',
+        'lang': 'ru',
+        'homepage': 'https://mangahub.ru',
+        'icon': 'https://p1.statichub.org/icons/apple-touch-icon.png',
+        # The site, and the image hosts its scans are on.
+        'network': ['mangahub.ru', '*.statichub.org'],
+    },
     'nyaa': {
         'name': 'Nyaa',
         'version': '1.0.1',

@@ -35,6 +35,17 @@
 			"icon": "https://mangalib.me/static/images/logo/sl/icon-180.png"
 		},
 		{
+			"manifest": "https://raw.githubusercontent.com/LukOleksandr/mediary-plugins/main/mangahub/manifest.json",
+			"id": "mangahub",
+			"name": "MangaHub",
+			"version": "1.0.0",
+			"type": "manga-provider",
+			"author": "Mediary community",
+			"description": "Manga in Russian from MangaHub (mangahub.ru), read from its pages.",
+			"lang": "ru",
+			"icon": "https://p1.statichub.org/icons/apple-touch-icon.png"
+		},
+		{
 			"manifest": "https://raw.githubusercontent.com/LukOleksandr/mediary-plugins/main/nyaa/manifest.json",
 			"id": "nyaa",
 			"name": "Nyaa",

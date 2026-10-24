@@ -1,0 +1,17 @@
+{
+	"id": "mangahub",
+	"name": "MangaHub",
+	"version": "1.0.0",
+	"type": "manga-provider",
+	"author": "Mediary community",
+	"description": "Manga in Russian from MangaHub (mangahub.ru), read from its pages.",
+	"lang": "ru",
+	"homepage": "https://mangahub.ru",
+	"icon": "https://p1.statichub.org/icons/apple-touch-icon.png",
+	"network": [
+		"mangahub.ru",
+		"*.statichub.org"
+	],
+	"payload": "https://raw.githubusercontent.com/LukOleksandr/mediary-plugins/main/mangahub/plugin.js",
+	"sha256": "5a704223922428cca6e3830328c527eeefebefe56a34006d7226e1801dc32ecb"
+}
